@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_above="@+id/radiogroup" >
+            </FrameLayout>
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <View
+                android:id="@+id/activity_main_bottom_text"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_above="@+id/radiogroup"
+                android:background="@drawable/line" />
+            
+            <LinearLayout
+                    android:id="@+id/radiogroup"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal" 
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:background="#f0f6ff">
+
+                    <ImageView
+                        android:id="@+id/radio_home"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/home_choose"
+                        android:button="@null" 
+                        android:clickable="true"
+                        android:onClick="onNavClick"
+                        android:contentDescription="@null"/>
+
+                    <ImageView
+                        android:id="@+id/radio_category"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/category"
+                        android:button="@null" 
+                        android:clickable="true"
+                        android:onClick="onNavClick"
+                        android:contentDescription="@null"/>
+
+                    <ImageView
+                        android:id="@+id/radio_bailian"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bailian"
+                        android:button="@null" 
+                        android:clickable="true"
+                        android:onClick="onNavClick"
+                        android:contentDescription="@null"/>
+
+                    <ImageView
+                        android:id="@+id/radio_cart"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/cart"
+                        android:button="@null"
+                        android:clickable="true"
+                        android:onClick="onNavClick"
+                        android:contentDescription="@null" />
+
+                    <ImageView
+                        android:id="@+id/radio_personal"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/personal"
+                        android:button="@null" 
+                        android:clickable="true"
+                        android:onClick="onNavClick"
+                        android:contentDescription="@null"/>
+                </LinearLayout>
+        </RelativeLayout>
+    </TabHost>
+
+</RelativeLayout>
